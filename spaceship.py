@@ -37,3 +37,9 @@ class Spaceship:
                 return True
 
         return False
+
+    def __lt__(self, other):
+        return self.get_engine_power() < other.get_engine_power()
+
+    def __gt__(self, other):
+        return self.get_engine_power() > other.get_engine_power()
