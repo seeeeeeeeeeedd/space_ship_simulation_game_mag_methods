@@ -43,3 +43,10 @@ class Spaceship:
 
     def __gt__(self, other):
         return self.get_engine_power() > other.get_engine_power()
+
+    def __add__(self, other):
+        new_title = self.get_title() + self.TITLE_SEPARATOR + other.get_title()
+        new_engine_power = self.get_engine_power() + other.get_engine_power()
+        new_max_speed = (self.get_max_speed() + other.get_max_speed()) / self.SHIPS_COUNT_FOR_AVERAGE
+
+        return Spaceship(new_title, new_engine_power, new_max_speed)
