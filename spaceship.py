@@ -1,6 +1,9 @@
 class Spaceship:
     def __init__(self, title: str, engine_power: float | int, max_speed: float | int):
 
+        self.TITLE_SEPARATOR = ' + '
+        self.SHIPS_COUNT_FOR_AVERAGE = 2
+
         is_valid_title = self.__is_valid_title(title)
         is_valid_number = self.__is_valid_number(engine_power, max_speed)
 
