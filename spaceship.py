@@ -15,6 +15,15 @@ class Spaceship:
             self.__engine_power = -1
             self.__max_speed = -1
 
+    def get_title(self) -> str:
+        return self.__title
+
+    def get_engine_power(self) -> float | int:
+        return self.__engine_power
+
+    def get_max_speed(self) -> float | int:
+        return self.__max_speed
+
     def __is_valid_title(self, title) -> bool:
         if isinstance(title, str):
             if title.strip():
