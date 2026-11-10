@@ -40,6 +40,11 @@ class Spaceship:
     def get_max_speed(self) -> float | int:
         return self.__max_speed
 
+    def __str__(self) -> str:
+        return (f'{self.__title}, '
+                f'мощность двигателя: {self.__engine_power}, '
+                f'максимальная скорость: {self.__max_speed}')
+
     def __is_valid_title(self, title) -> bool:
         if isinstance(title, str):
             if title.strip():
